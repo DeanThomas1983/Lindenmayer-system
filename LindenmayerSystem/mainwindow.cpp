@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    dataModel = new DataModel(this);
 }
 
 MainWindow::~MainWindow()
