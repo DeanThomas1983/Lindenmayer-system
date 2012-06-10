@@ -25,3 +25,16 @@ QString Translation::translate()
 
     return result;
 }
+
+QString Translation::toString()
+{
+    QString result = "";
+
+    result.append(inputCharacter);
+
+    result.append(" > ");
+
+    result.append(translate());
+
+    return result;
+}

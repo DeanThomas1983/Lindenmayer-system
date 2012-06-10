@@ -11,6 +11,7 @@ public:
     explicit DataModel(QObject *parent = 0);
     QString *inputString;
     QList<Translation> *rules;
+    QString getListOfRules();
 
 signals:
     

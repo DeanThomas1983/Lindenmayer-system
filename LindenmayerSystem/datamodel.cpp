@@ -12,3 +12,17 @@ DataModel::DataModel(QObject *parent) :
 
     qDebug() << t->translate();
 }
+
+QString DataModel::getListOfRules()
+{
+    QString result = "";
+
+    for (int i = 0; i < rules->count(); i++)
+    {
+        Translation *t = rules->at(i);
+
+        result.append(t->toString());
+    }
+
+    return result;
+}

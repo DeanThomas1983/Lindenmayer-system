@@ -14,6 +14,7 @@ public:
     QChar inputCharacter;
     QList<QChar> *outputCharacter;
     QString translate();
+    QString toString();
 
 signals:
     

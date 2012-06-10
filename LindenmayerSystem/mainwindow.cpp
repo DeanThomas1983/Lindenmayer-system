@@ -14,3 +14,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->textEdit->setText(dataModel->getListOfRules());
+}
