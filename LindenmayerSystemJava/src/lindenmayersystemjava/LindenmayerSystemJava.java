@@ -20,7 +20,7 @@ public class LindenmayerSystemJava {
         // TODO code application logic here
         Debug.println("main","Staring program");
         
-        dataModel.buildDebugData();
+        
     }
     
     

@@ -14,11 +14,14 @@ public class DrawingRule {
     
     public DrawingRule()
     {
-        //this(DrawingInstruction.MoveForward, 1);
+        this.drawingIntruction = DrawingInstruction.MoveForward;
+        this.numberOfUnits = 1;
     }
     
     public DrawingRule(DrawingInstruction drawingInstruction, int numberOfUnits)
     {
+        this();
+        
         this.drawingIntruction = drawingInstruction;
         this.numberOfUnits = numberOfUnits;
     }
