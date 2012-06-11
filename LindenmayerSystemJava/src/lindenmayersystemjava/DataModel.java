@@ -26,20 +26,20 @@ public class DataModel {
         ruleSet1.add('A');
         ruleSet1.add('B');
         ruleSet1.add('D');
-        Translation t1 = new Translation('A',ruleSet1);
+        Translation t1 = new Translation('A',ruleSet1,new DrawingRule());
         rules.add(t1);
         
         //  Ruleset number 2
         ArrayList<Character> ruleSet2 = new ArrayList<>();
         ruleSet2.add('B');
         ruleSet2.add('D');
-        Translation t2 = new Translation('B',ruleSet2);
+        Translation t2 = new Translation('B',ruleSet2,new DrawingRule());
         rules.add(t2);
         
         //  Ruleset number 3
         ArrayList<Character> ruleSet3 = new ArrayList<>();
         ruleSet3.add('A');
-        Translation t3 = new Translation('C',ruleSet3);
+        Translation t3 = new Translation('C',ruleSet3,new DrawingRule());
         rules.add(t3);
         
         Debug.println(METHOD_NAME,
