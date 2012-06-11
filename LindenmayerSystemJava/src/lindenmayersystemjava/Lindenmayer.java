@@ -15,19 +15,19 @@ public final class Lindenmayer {
     private String inputString;
     //  TODO: build wrapper class for rules list to allow the return of the
     //  index of a specific character
-    private ArrayList<Translation> rules = new ArrayList<>();
+    private TranslationRuleList translationRuleList = new TranslationRuleList();
     
     public Lindenmayer()
     {
         buildDebugData();
     }
     
-    public Lindenmayer(ArrayList rules, 
+    public Lindenmayer(TranslationRuleList translationRuleList, 
             String inputString)
     {
         this();
         
-        this.rules = rules;
+        this.translationRuleList = translationRuleList;
         this.inputString = inputString;
     }
     
@@ -46,41 +46,28 @@ public final class Lindenmayer {
         ruleSet1.add('B');
         ruleSet1.add('D');
         Translation t1 = new Translation('A',ruleSet1,new DrawingRule());
-        rules.add(t1);
+        translationRuleList.add(t1);
         
         //  Ruleset number 2
         ArrayList<Character> ruleSet2 = new ArrayList<>();
         ruleSet2.add('B');
         ruleSet2.add('D');
         Translation t2 = new Translation('B',ruleSet2,new DrawingRule());
-        rules.add(t2);
+        translationRuleList.add(t2);
         
         //  Ruleset number 3
         ArrayList<Character> ruleSet3 = new ArrayList<>();
         ruleSet3.add('A');
         Translation t3 = new Translation('C',ruleSet3,new DrawingRule());
-        rules.add(t3);
+        translationRuleList.add(t3);
+        
+        Debug.println(METHOD_NAME, 
+                "Rules are " + this.translationRuleList.getListOfRules());
         
         Debug.println(METHOD_NAME,
-                "Translation rules: " + rules.size());
-        
-        Debug.println(METHOD_NAME, this.getListOfRules());
+                "Translation rule count is " + translationRuleList.size());
         
         Debug.println(METHOD_NAME, this.listLevels(0));
-    }
-    
-    public String getListOfRules()
-    {
-        String result = "";
-        
-        for (int i = 0; i < rules.size(); i++)
-        {
-            result += rules.get(i).toString();
-            
-            result += "\n";
-        }
-        
-        return result;
     }
     
     public String listLevels(int maximumLevel)
