@@ -8,7 +8,7 @@ import sun.security.util.Debug;
 
 /**
  *
- * @author dean
+ * @author Dean Thomas
  */
 public class LindenmayerSystemJava {
 

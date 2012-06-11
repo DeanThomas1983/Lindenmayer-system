@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author dean
+ * @author Dean Thomas
  */
 public class Translation {
     private char inputCharacter;

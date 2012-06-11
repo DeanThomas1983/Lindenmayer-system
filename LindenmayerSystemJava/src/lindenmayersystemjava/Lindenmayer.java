@@ -9,7 +9,7 @@ import sun.security.util.Debug;
 
 /**
  *
- * @author dean
+ * @author Dean Thomas
  */
 public final class Lindenmayer {
     private String inputString;

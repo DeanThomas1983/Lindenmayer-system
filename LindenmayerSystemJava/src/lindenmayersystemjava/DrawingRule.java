@@ -6,7 +6,7 @@ package lindenmayersystemjava;
 
 /**
  *
- * @author dean
+ * @author Dean Thomas
  */
 public class DrawingRule {
     private DrawingInstruction drawingIntruction;
