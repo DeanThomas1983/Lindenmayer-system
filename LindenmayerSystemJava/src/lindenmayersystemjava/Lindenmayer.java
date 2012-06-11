@@ -44,14 +44,14 @@ public final class Lindenmayer {
         ArrayList<Character> ruleSet1 = new ArrayList<>();
         ruleSet1.add('A');
         ruleSet1.add('B');
-        ruleSet1.add('D');
+        ruleSet1.add('A');
         Translation t1 = new Translation('A',ruleSet1,new DrawingRule());
         translationRuleList.add(t1);
         
         //  Ruleset number 2
         ArrayList<Character> ruleSet2 = new ArrayList<>();
         ruleSet2.add('B');
-        ruleSet2.add('D');
+        ruleSet2.add('B');
         Translation t2 = new Translation('B',ruleSet2,new DrawingRule());
         translationRuleList.add(t2);
         
@@ -67,7 +67,7 @@ public final class Lindenmayer {
         Debug.println(METHOD_NAME,
                 "Translation rule count is " + translationRuleList.size());
         
-        Debug.println(METHOD_NAME, this.listLevels(0));
+        Debug.println(METHOD_NAME, this.listLevels(3));
     }
     
     public String listLevels(int maximumLevel)
@@ -99,9 +99,10 @@ public final class Lindenmayer {
                 
                 for (int j = 0; j < input.length(); j++)
                 {
-                    
-                    
-                    //result +=
+                    //  Looks a bit messy but works
+                    result += translationRuleList.get(
+                            this.translationRuleList.indexOf(
+                            input.charAt(j))).translate();
                 }
             }   
         }

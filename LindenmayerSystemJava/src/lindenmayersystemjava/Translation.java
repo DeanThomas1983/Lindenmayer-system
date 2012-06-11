@@ -37,9 +37,9 @@ public class Translation {
     {
         String result = "";
         
-        for(int i = 0; i < outputCharacter.size(); i++)
+        for(int i = 0; i < getOutputCharacter().size(); i++)
         {
-            result += outputCharacter.get(i);
+            result += getOutputCharacter().get(i);
         }
         
         return result;
@@ -50,12 +50,26 @@ public class Translation {
     {
         String result = "";
         
-        result += inputCharacter;
+        result += getInputCharacter();
         
         result += " > ";
         
         result += translate();
         
         return result;
+    }
+
+    /**
+     * @return the inputCharacter
+     */
+    public char getInputCharacter() {
+        return inputCharacter;
+    }
+
+    /**
+     * @return the outputCharacter
+     */
+    public ArrayList<Character> getOutputCharacter() {
+        return outputCharacter;
     }
 }
