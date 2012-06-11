@@ -13,6 +13,8 @@ import sun.security.util.Debug;
  */
 public final class Lindenmayer {
     private String inputString;
+    //  TODO: build wrapper class for rules list to allow the return of the
+    //  index of a specific character
     private ArrayList<Translation> rules = new ArrayList<>();
     
     public Lindenmayer()
