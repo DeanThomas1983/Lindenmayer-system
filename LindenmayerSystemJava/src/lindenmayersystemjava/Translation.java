@@ -14,14 +14,15 @@ import java.util.ArrayList;
  */
 public class Translation {
     private char inputCharacter;
-    private ArrayList outputCharacter = new ArrayList();
+    private ArrayList<Character> outputCharacter = new ArrayList<Character>();
     
     public Translation()
     {
         
     }
     
-    public Translation(char inputCharacter, ArrayList outputCharacter)
+    public Translation(char inputCharacter, 
+            ArrayList<Character> outputCharacter)
     {
         this();
         
