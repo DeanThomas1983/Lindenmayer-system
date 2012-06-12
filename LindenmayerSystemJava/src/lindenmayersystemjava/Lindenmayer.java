@@ -4,6 +4,12 @@
  */
 package lindenmayersystemjava;
 
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.geom.Point2D;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
 import java.util.ArrayList;
 import sun.security.util.Debug;
 
@@ -149,5 +155,23 @@ public final class Lindenmayer {
         {
             Debug.println("dumpCacheToConsole:", "\n" + cachedData.get(i));
         }
+    }
+    
+    public void drawLevel2D(int level, Graphics g)
+    {
+        Point2D currentPenPos = null;
+        float angle;
+        String levelData;
+        
+        //  Set initial position and facing
+        currentPenPos.setLocation(g.getClipBounds().getCenterX(),
+                g.getClipBounds().getCenterY());
+        angle = 0;
+        
+        //  Get the data for the current level from the cache (if available)
+        if (cachedData.size() >= level)
+            levelData = cachedData.get(level);
+        
+        
     }
 }
