@@ -12,9 +12,10 @@ import sun.security.util.Debug;
  * @author Dean Thomas
  */
 public final class Lindenmayer {
+    private ArrayList<String> cachedData = new ArrayList();
+    
     private String inputString;
-    //  TODO: build wrapper class for rules list to allow the return of the
-    //  index of a specific character
+    
     private TranslationRuleList translationRuleList = new TranslationRuleList();
     
     public Lindenmayer()
@@ -67,7 +68,10 @@ public final class Lindenmayer {
         Debug.println(METHOD_NAME,
                 "Translation rule count is " + translationRuleList.size());
         
-        Debug.println(METHOD_NAME, this.listLevels(3));
+        //  Build a 10 level cache to begin with
+        this.cacheLevels(10);
+        
+        //this.dumpCacheToConsole();
     }
     
     public String listLevels(int maximumLevel)
@@ -108,5 +112,42 @@ public final class Lindenmayer {
         }
         
         return result;
+    }
+    
+    /**
+     * Speed up access to higher levels
+     * 
+     * To speed up access to high levels cache the results and store in an
+     * array.
+     * 
+     * @param maximumLevel calculate levels 1 to this value, higher values will
+     * require additional processing time
+     */
+    public void cacheLevels(int maximumLevel)
+    {
+        final String METHOD_NAME = "cacheLevels";
+        
+        Debug.println(METHOD_NAME,"Building cache");
+        
+        cachedData.clear();
+        
+        //  Level zero
+        cachedData.add(inputString);
+        
+        //  Levels 1 - maximumLevel
+        for (int i = 1; i < maximumLevel; i++)
+        {
+            Debug.println(METHOD_NAME, "" + i);
+            
+            cachedData.add(getLevel(i));
+        }
+    }
+    
+    public void dumpCacheToConsole()
+    {
+        for (int i = 0; i < cachedData.size(); i++)
+        {
+            Debug.println("dumpCacheToConsole:", "\n" + cachedData.get(i));
+        }
     }
 }
