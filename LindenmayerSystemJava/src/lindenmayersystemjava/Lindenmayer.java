@@ -48,7 +48,7 @@ public final class Lindenmayer {
         this.inputString = "A";
         
         //  Ruleset number 1
-        ArrayList<Character> ruleSet1 = new ArrayList<>();
+        ArrayList<Character> ruleSet1 = new ArrayList<Character>();
         ruleSet1.add('A');
         ruleSet1.add('B');
         ruleSet1.add('A');
@@ -56,14 +56,14 @@ public final class Lindenmayer {
         translationRuleList.add(t1);
         
         //  Ruleset number 2
-        ArrayList<Character> ruleSet2 = new ArrayList<>();
+        ArrayList<Character> ruleSet2 = new ArrayList<Character>();
         ruleSet2.add('B');
         ruleSet2.add('B');
         Translation t2 = new Translation('B',ruleSet2,new DrawingRule());
         translationRuleList.add(t2);
         
         //  Ruleset number 3
-        ArrayList<Character> ruleSet3 = new ArrayList<>();
+        ArrayList<Character> ruleSet3 = new ArrayList<Character>();
         ruleSet3.add('A');
         Translation t3 = new Translation('C',ruleSet3,new DrawingRule());
         translationRuleList.add(t3);

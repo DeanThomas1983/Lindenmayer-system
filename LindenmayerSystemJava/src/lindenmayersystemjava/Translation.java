@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class Translation {
     private char inputCharacter;
-    private ArrayList<Character> outputCharacter = new ArrayList<>();
+    private ArrayList<Character> outputCharacter = new ArrayList<Character>();
     private DrawingRule drawingRule;
     
     public Translation()
