@@ -7,11 +7,16 @@ package lindenmayersystemjava;
 import java.util.ArrayList;
 
 /**
- *
+ * @class TranslationRuleList
  * @author Dean Thomas
  */
 public class TranslationRuleList extends ArrayList<Translation> {
     
+    /**
+     * Find the Index of a particular character in the rule list
+     * @param searchChar the character to search for
+     * @return integer; the index of the character in the array
+     */
     public int indexOf(char searchChar)
     {
         int result = -1;
@@ -27,6 +32,10 @@ public class TranslationRuleList extends ArrayList<Translation> {
         return result;
     }
     
+    /**
+     * Get the List of rules as a string, which can be displayed in the console
+     * @return String - the list as a formatted string
+     */
     public String getListOfRules()
     {
         String result = "\n";

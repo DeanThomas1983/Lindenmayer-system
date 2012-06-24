@@ -77,6 +77,11 @@ public final class Lindenmayer {
         //  Build a 10 level cache to begin with
         this.cacheLevels(10);
         
+        for (int i = 0; i < 15; i++)
+        {
+            Debug.println("", this.getLevel(i));
+        }
+        
         //this.dumpCacheToConsole();
     }
     

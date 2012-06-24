@@ -5,7 +5,7 @@
 package lindenmayersystemjava;
 
 /**
- *
+ * @class DrawingRule
  * @author Dean Thomas
  */
 public class DrawingRule {
