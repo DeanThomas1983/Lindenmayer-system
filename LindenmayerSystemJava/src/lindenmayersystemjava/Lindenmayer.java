@@ -7,7 +7,6 @@ package lindenmayersystemjava;
 import java.awt.Graphics;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
-import sun.security.util.Debug;
 
 /**
  *
@@ -38,7 +37,7 @@ public final class Lindenmayer {
     {
         final String METHOD_NAME = "buildDebugData";
         
-        Debug.println(METHOD_NAME, "Creating debug data set");
+        System.out.println(METHOD_NAME + " - Creating debug data set");
         
         //  Input
         this.inputString = "A";
@@ -64,18 +63,18 @@ public final class Lindenmayer {
         Translation t3 = new Translation('C',ruleSet3,new DrawingRule());
         translationRuleList.add(t3);
         
-        Debug.println(METHOD_NAME, 
-                "Rules are " + this.translationRuleList.getListOfRules());
+        System.out.println(METHOD_NAME + 
+                " - Rules are " + this.translationRuleList.getListOfRules());
         
-        Debug.println(METHOD_NAME,
-                "Translation rule count is " + translationRuleList.size());
+        System.out.println(METHOD_NAME +
+                " - Translation rule count is " + translationRuleList.size());
         
         //  Build a 10 level cache to begin with
         this.cacheLevels(10);
         
         for (int i = 0; i < 15; i++)
         {
-            Debug.println("", this.getLevel(i));
+            System.out.println(this.getLevel(i));
         }
         
         //this.dumpCacheToConsole();
@@ -134,7 +133,7 @@ public final class Lindenmayer {
     {
         final String METHOD_NAME = "cacheLevels";
         
-        Debug.println(METHOD_NAME,"Building cache");
+        System.out.println(METHOD_NAME + " - Building cache");
         
         cachedData.clear();
         
@@ -144,7 +143,7 @@ public final class Lindenmayer {
         //  Levels 1 - maximumLevel
         for (int i = 1; i < maximumLevel; i++)
         {
-            Debug.println(METHOD_NAME, "" + i);
+            System.out.println("" + i);
             
             cachedData.add(getLevel(i));
         }
@@ -154,7 +153,7 @@ public final class Lindenmayer {
     {
         for (int i = 0; i < cachedData.size(); i++)
         {
-            Debug.println("dumpCacheToConsole:", "\n" + cachedData.get(i));
+            System.out.println(cachedData.get(i));
         }
     }
     

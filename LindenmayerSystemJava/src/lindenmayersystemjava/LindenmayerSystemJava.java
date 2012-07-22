@@ -75,7 +75,7 @@ public class LindenmayerSystemJava extends JFrame {
         if(!show)
             animator.stop();
         super.setVisible(show);
-        if(!show)
+        if(show)
             animator.start();
     }
 
