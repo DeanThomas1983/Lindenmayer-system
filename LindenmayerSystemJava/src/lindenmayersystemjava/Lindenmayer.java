@@ -5,11 +5,7 @@
 package lindenmayersystemjava;
 
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
 import java.awt.geom.Point2D;
-import java.awt.image.ImageObserver;
-import java.awt.image.ImageProducer;
 import java.util.ArrayList;
 import sun.security.util.Debug;
 
